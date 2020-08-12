@@ -7,45 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Gym Manager</title>
+    <title>Nilji</title>
     <link rel="icon" href="/img/icon.png">
 
     {% block head_content %}{% endblock %}
 
-    <script src="/js/toggle_classes.js"></script>
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css" >    
+
 </head>
 
 <body>
 
-    <header>
-        <nav class="menu-navegacao">
-            <ul>
-                <li>
-                    <a
-                        href="/instructors"
-                        id="instructors-link"
-                    >
-                    Instructors
-                    </a>
-                </li>
-                <li>
-                    <a 
-                        href="/members"
-                        id="members-link"
-                    >
-                    Members
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    {% include "parts/header.njk" %}
+   
 
     {% block body_main_content %}{% endblock %}
 
-    <footer>
-
-    </footer>
+    {% include "parts/footer.njk" %}
 
     <script>
         toggleSpecificURLClasses()
