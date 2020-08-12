@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Gym Manager</title>
+    <link rel="icon" href="/img/icon.png">
+
+    {% block head_content %}{% endblock %}
+
+    <script src="/js/toggle_classes.js"></script>
+    
+</head>
+
+<body>
+
+    <header>
+        <nav class="menu-navegacao">
+            <ul>
+                <li>
+                    <a
+                        href="/instructors"
+                        id="instructors-link"
+                    >
+                    Instructors
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        href="/members"
+                        id="members-link"
+                    >
+                    Members
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block body_main_content %}{% endblock %}
+
+    <footer>
+
+    </footer>
+
+    <script>
+        toggleSpecificURLClasses()
+    </script>
+
+</body>
+
+</html>
