@@ -2,8 +2,16 @@
 
 :root {
 
-    --primary-color: #FD951F;
-    --secondary-color: #1FD4FD;
+    --Primary-Color: #282a36;
+    --Secundary-Color:	#44475a;
+    --Selection:  #44475a;
+    --Foreground:  #f8f8f2;
+    --Comment:  #6272a4;
+    --Pink: #ff79c6;
+    --Purple: #bd93f9;
+    --Cyan: #8be9fd;
+    --Green: #50fa7b;
+    --Red: #ff5555;
 }
 
 
@@ -27,7 +35,7 @@ html, body {
 body { 
 
     font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
+    background-color: var(--Primary-Color);
 
 }
 
@@ -35,7 +43,7 @@ body {
 
 header, footer {
 
-    background-color: black;
+    background-color: var(--Secundary-Color);
     color: white;
     width: 100%;
     padding: 32px 0;
@@ -48,6 +56,35 @@ header, footer {
     width: 90%;
     max-width: 940px;
     margin: 0 auto;
+
+}
+
+.button {
+
+    background-color: var(--Secundary-Color);
+    border: 1px solid var(--Purple);
+    color: white;
+    display: block;
+    margin: 16px 0;
+    padding: 12px 16px;
+    width: 100%;
+    border-radius: 4px;
+
+    /* para colocar o botão para baixo */
+    align-self: end;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+}
+
+.button:hover {
+
+    background-color: var(--Purple);
+    border: 1px solid var(--Comment);
 
 }
 
@@ -117,12 +154,107 @@ nav.primary ul li a {
 
 nav.primary ul li a:hover {
 
-    color: var(--primary-color);
+    color: var(--Purple);
 
 }
 
 nav.primary ul li a i {
 
     margin-right: 8px;
+
+}
+
+
+
+/* Product Form */
+section.form {
+
+    background-color: var(--Primary-Color);
+    padding: 32px 24px;
+    margin: 32px auto;
+    box-shadow: 2px 2px 2px -4px rgba(60, 60, 60, .9);
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    max-width: 700px;
+    width: 90%
+
+}
+
+section.form .header h3 {
+
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    color: white;
+    margin-bottom: 16px;
+
+}
+
+form .item {
+
+    margin-bottom: 16px;
+
+}
+
+form .item > div:nth-child(1) {
+
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+
+}
+
+form .item > div:nth-child(1):hover {
+
+    color: var(--Purple)
+
+}
+
+
+form .item input[type="text"],
+form .item input[type="number"],
+form .item textarea,
+form .item select {
+
+    width: 100%;
+    background-color: var(--Secundary-Color);
+    color: white;
+    padding: 8px 16px;
+    box-shadow: 2px 2px 2px -4px rgba(63, 63, 63, .9);
+    border: 1px solid var(--Purple);
+    border-radius: 4px;
+    font-size: 16px;
+
+}
+
+form .item select {
+
+    /*permitir estilização do select*/
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    /*trazer de volta o ícone*/
+    background-color: var(--Secundary-Color);
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(to bottom, #44475a 0%,#44475a 100%);
+    background-repeat: no-repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+
+}
+
+form .item textarea {
+
+    min-height: 150px;
+
+}
+
+form .fields {
+
+    margin-bottom: 64px;
 
 }

@@ -1,0 +1,94 @@
+<div class="item">
+    <div>Categoria</div>
+    <div>
+        <select name="category_id">
+
+            {% for category in categories %}
+            <option value="{{category.id}}">
+                {% if product.category_id == category.id %}selected{%endif%}
+                {{category.name}}
+            </option>
+            {%endfor%}
+        </select>
+        </div>
+    </div>
+
+<div class="item">
+    <div>Name</div>
+    <input
+        type="text"
+        name="name"
+        placeholder="Digite o Título do Anúncio"
+        value="{{ product.name }}"
+    >
+</div>
+
+<div class="item">
+    <div>Descrição</div>
+        <textarea name="description">
+            {{product.description}}
+        </textarea>
+</div>
+
+<!-- Campo de foto -->
+
+<div class="item">
+    <div>Valor</div>
+    <div>
+    <input
+    type="text"
+    name="price" 
+    placeholder="Preço do Produto"
+    value="{{ product.price }}"
+>
+    <!-- Fazer uma máscara de dinheiro/reais -->
+</div>
+{% if product.old_price %}
+    <input type="hidden" name="old_price" value="{{product.old_price}}">
+{% endif %}
+</div>
+
+<div class="item">
+    <div>Quantidade</div>
+    <input
+        type="number"
+        name="quantity"
+        placeholder="Estroque Disponível"
+        value="{{ product.quantity }}"
+    >
+</div>
+
+{% if product.status %}
+<div class="item">
+    <div>Disponível ?</div>
+    <ul>
+        <li>
+            <input
+                type="radio"
+                name="status"
+                value="1"
+
+                {% if product.status == "1" %}
+                    checked
+                {% endif %}
+
+                required
+            >
+            Sim
+        </li>
+        <li>
+            <input
+                type="radio"
+                name="status"
+                value="0"
+
+                {% if product.status == "0" %}
+                    checked
+                {% endif %}
+            >
+            Não
+        </li>
+    </ul>
+</div>
+
+{% endif %}
