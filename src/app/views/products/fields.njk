@@ -25,9 +25,7 @@
 
 <div class="item">
     <div>Descrição</div>
-        <textarea name="description">
-            {{product.description}}
-        </textarea>
+        <textarea name="description">{{product.description}}</textarea>
 </div>
 
 <!-- Campo de foto -->
@@ -59,37 +57,29 @@
     >
 </div>
 
-{% if product.status %}
+{% if (product.status == '1') or (product.status == 0) %}
 <div class="item">
-    <div>Disponível ?</div>
-    <ul>
-        <li>
-            <input
-                type="radio"
-                name="status"
-                value="1"
-
-                {% if product.status == "1" %}
-                    checked
-                {% endif %}
-
-                required
-            >
-            Sim
-        </li>
-        <li>
-            <input
-                type="radio"
-                name="status"
-                value="0"
-
-                {% if product.status == "0" %}
-                    checked
-                {% endif %}
-            >
-            Não
-        </li>
-    </ul>
-</div>
+    <div>Disponível?</div>
+                    <div>
+                        <span>
+                            <input 
+                                type="radio" 
+                                name="status" 
+                                value="1" 
+                                {% if product.status == '1' %}
+                                checked
+                                {% endif %} > Sim
+                        </span>
+                        <span>
+                            <input 
+                                type="radio" 
+                                name="status" 
+                                value="0"
+                                {% if product.status == '0' %}
+                                checked
+                                {% endif %}> Não
+                        </span>
+                    </div>
+                </div>
 
 {% endif %}

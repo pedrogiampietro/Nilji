@@ -88,6 +88,22 @@ header, footer {
 
 }
 
+.button.edit {
+    background-color: var(--Secundary-Color)
+}
+
+.button.delete {
+    background-color: lightcoral;
+}
+
+.button.edit:hover {
+    background-color: var(--Primary-Color)
+}
+
+.button.delete:hover {
+    background-color: var(--Red);
+}
+
 header div.container {
 
     display: grid;
@@ -192,6 +208,12 @@ section.form .header h3 {
 
 }
 
+form .fields {
+
+    margin-bottom: 64px;
+
+}
+
 form .item {
 
     margin-bottom: 16px;
@@ -253,8 +275,18 @@ form .item textarea {
 
 }
 
-form .fields {
+form .item span {
 
-    margin-bottom: 64px;
+    padding: 8px 16px;
+    background-color: var(--Secundary-Color);
+    border-radius: 16px;
+    color: #777;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
 
 }
+
