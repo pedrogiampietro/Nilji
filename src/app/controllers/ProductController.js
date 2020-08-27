@@ -1,6 +1,8 @@
+const { formatPrice } = require('../../lib/utils/format_price')
+
 const Category = require('../models/Category')
 const Product = require('../models/Product')
-const { formatPrice } = require('../../lib/utils/format_price')
+const File = require('../models/File')
 
 module.exports = {
     create(req, res) {
@@ -20,14 +22,20 @@ module.exports = {
 
         for(key of keys) {
             if (req.body[key] == '') {
-                return res.send('Por favor, preencha todos os dados.')
+                return res.send('Por favor, preencha todos os campos!')
             }
         }
 
+        if (req.files.length == 0)
+            return res.send('Por favor, envie pelo menos uma imagem')
+        
         let results = await Product.create(req.body)
         const productId = results.rows[0].id
 
-       return res.render(`products/create.njk/${productId}`)
+        const filesPromise = req.files.map(file => File.create({...file, product_id: productId}))
+        await Promise.all(filesPromise)
+
+        return res.redirect(`/products/${productId}/edit`)
    
     },
     async edit(req, res) {
