@@ -1,0 +1,45 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<section class="product-single container">
+
+    <div class="galerry">
+        <img src="https://img.itdg.com.br/tdg/images/recipes/000/000/324/323149/323149_original.jpg?mode=crop&width=710&height=400" alt="Galeria">
+    </div>
+
+    <div class="info">
+        <h1>{{product.name}}</h1>
+        <div class="published">
+            Públicado em {{product.published.day}} ás {{product.published.hour}}
+        </div>
+        <div class="description">
+            {{product.description}}
+        </div>
+
+        <div class="price-buy">
+            <div class="price">
+                {{product.price}}
+
+                {% if product.price !== product.oldPrice %}
+
+                <span class="old">{{product.oldPrice}}</span>
+
+                {% endif %}
+            </div>
+            
+            <div class="buy">
+                {% if product.status == 0 %}
+                     <p class="unavailable">Indisponível</p>
+                {% elseif product.quantity == 0 %}
+                    <p class="unavailable">Fora de Estoque</p>
+                {% else %}
+                <button class="button">Comprar</button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock content %}
