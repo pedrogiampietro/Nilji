@@ -2,16 +2,16 @@
 
 :root {
 
-    --Primary-Color: #282a36;
-    --Secundary-Color:	#44475a;
-    --Selection:  #44475a;
-    --Foreground:  #f8f8f2;
-    --Comment:  #6272a4;
-    --Pink: #ff79c6;
-    --Purple: #bd93f9;
-    --Cyan: #8be9fd;
-    --Green: #50fa7b;
-    --Red: #ff5555;
+    --primary-color: #282a36;
+    --secundary-color:	#44475a;
+    --selection:  #44475a;
+    --foreground:  #f8f8f2;
+    --comment:  #6272a4;
+    --pink: #ff79c6;
+    --purple: #bd93f9;
+    --cyan: #8be9fd;
+    --green: #50fa7b;
+    --red: #ff5555;
 }
 
 
@@ -35,7 +35,7 @@ html, body {
 body { 
 
     font-family: 'Roboto', sans-serif;
-    background-color: var(--Primary-Color);
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
 
@@ -45,7 +45,7 @@ body {
 
 header, footer {
 
-    background-color: var(--Secundary-Color);
+    background-color: var(--secundary-color);
     color: white;
     width: 100%;
     padding: 32px 0;
@@ -69,8 +69,8 @@ footer {
 
 .button {
 
-    background-color: var(--Secundary-Color);
-    border: 1px solid var(--Purple);
+    background-color: var(--secundary-color);
+    border: 1px solid var(--purple);
     color: white;
     display: block;
     margin: 16px 0;
@@ -91,13 +91,13 @@ footer {
 
 .button:hover {
 
-    background-color: var(--Purple);
+    background-color: var(--purple);
     border: 1px solid var(--Comment);
 
 }
 
 .button.edit {
-    background-color: var(--Secundary-Color)
+    background-color: var(--secundary-color)
 }
 
 .button.delete {
@@ -105,7 +105,7 @@ footer {
 }
 
 .button.edit:hover {
-    background-color: var(--Primary-Color)
+    background-color: var(--primary-color)
 }
 
 .button.delete:hover {
@@ -139,7 +139,7 @@ header div.container a {
 
 .logo h2 {
 
-    color: var(--primary-color);
+    color: white;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 2px;
@@ -178,7 +178,7 @@ nav.primary ul li a {
 
 nav.primary ul li a:hover {
 
-    color: var(--Purple);
+    color: var(--purple);
 
 }
 
@@ -193,7 +193,7 @@ nav.primary ul li a i {
 /* Product Form */
 section.form {
 
-    background-color: var(--Primary-Color);
+    background-color: var(--primary-color);
     padding: 32px 24px;
     margin: 32px auto;
     box-shadow: 2px 2px 2px -4px rgba(60, 60, 60, .9);
@@ -240,7 +240,7 @@ form .item > div:nth-child(1) {
 
 form .item > div:nth-child(1):hover {
 
-    color: var(--Purple)
+    color: var(--purple)
 
 }
 
@@ -251,11 +251,11 @@ form .item textarea,
 form .item select {
 
     width: 100%;
-    background-color: var(--Secundary-Color);
+    background-color: var(--secundary-color);
     color: white;
     padding: 8px 16px;
     box-shadow: 2px 2px 2px -4px rgba(63, 63, 63, .9);
-    border: 1px solid var(--Purple);
+    border: 1px solid var(--purple);
     border-radius: 4px;
     font-size: 16px;
 
@@ -268,7 +268,7 @@ form .item select {
     -webkit-appearance: none;
     appearance: none;
     /*trazer de volta o ícone*/
-    background-color: var(--Secundary-Color);
+    background-color: var(--secundary-color);
     background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
     linear-gradient(to bottom, #44475a 0%,#44475a 100%);
     background-repeat: no-repeat;
@@ -286,7 +286,7 @@ form .item textarea {
 form .item span {
 
     padding: 8px 16px;
-    background-color: var(--Secundary-Color);
+    background-color: var(--secundary-color);
     border-radius: 16px;
     color: #777;
     margin-right: 4px;
@@ -313,7 +313,7 @@ form .item #photos-upload p {
     padding: 8px 16px;
     border-radius: 4px;
     box-shadow: 0 2px 2px -6px #333;
-    background-color: var(--Secundary-Color);
+    background-color: var(--secundary-color);
     color: white;
     width: 100%;
     text-align: center;
@@ -386,14 +386,14 @@ form .item #photos-preview img {
 /* Product View */
 .product-single {
 
-    background-color: white;
+    background-color:var(--primary-color);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 24px;
     padding: 32px 24px;
     margin: 32px auto;
     box-shadow: 2px 2px 2px -4px rgba(63, 63, 63, 9);
-    border: 1px solid #efefef;
+    border: 1px solid var(--purple);
     border-radius: 4px;
 
 }
@@ -412,7 +412,7 @@ form .item #photos-preview img {
     /* fazendo a imagem ficar sempre no meio, centralizando */
     object-fit: none;
     object-position: 50% 50%;
-    border: 1px solid #efefef;
+    border: 1px solid var(--purple);
     cursor: zoom-in;
 
 }
@@ -468,7 +468,7 @@ form .item #photos-preview img {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: white;
+    background-color: var(--secundary-color);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, .3);
     width: 90%;
     height: 90%;
@@ -504,14 +504,26 @@ form .item #photos-preview img {
 
     font-size: 32px;
     line-height: 42px;
-    color: #333;
+    color: white;
     text-transform: uppercase;
+
+}
+
+.product-single .info h1:hover {
+
+    color: var(--purple);
+
+}
+
+.product-single .description { 
+
+    color: white;
 
 }
 
 .product-single .info .published {
 
-    color: #888;
+    color: var(--cyan);
     font-size: 12px;
     line-height: 22px;
     letter-spacing: 0.4px;
@@ -525,14 +537,14 @@ form .item #photos-preview img {
     align-items: center; /* deixando ao meio */
     justify-content: space-between; /* faz com que um fique no inicio do flex e o outro no fim */
     padding-top: 8px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--secundary-color);
     
 }
 
 .product-single .price-buy .price {
 
     font-size: 24px;
-    color: #333;
+    color: var(--green);
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -542,7 +554,7 @@ form .item #photos-preview img {
 .product-single .price-buy .price .old {
 
     text-decoration: line-through;
-    color: #999;
+    color: var(--secundary-color);
     font-size: 14px;
     font-weight: normal;
     margin-left: 8px;
@@ -551,8 +563,66 @@ form .item #photos-preview img {
 
 .product-single .price-buy .buy button {
 
-    background-color: var(--Secundary-Color);
+    background-color: var(--secundary-color);
     font-size: 14px;
     letter-spacing: 0.4px;
+
+}
+
+/* Shop */
+
+.shop h2 {
+
+    margin: 48px 0;
+
+}
+
+.shop .items {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px;
+
+}
+
+.shop .product {
+
+    display: grid;
+
+}
+
+.shop .product .image {
+
+    padding-top: 56.25%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+.shop .items h4 {
+
+    margin: 8px 0;
+    font-weight: 300;
+    color: white;
+
+}
+
+.shop .items p {
+
+    color: black;
+    font-weight: 300;
+    font-size: 24px;
+    margin-top: 8px;
+
+}
+
+.shop .product .old-price {
+
+    padding: 0;
+    margin: 4px 0;
+    font-size: 14px;
+    color: grey;
+    text-decoration: line-through;
 
 }
