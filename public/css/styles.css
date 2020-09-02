@@ -67,6 +67,18 @@ footer {
 
 }
 
+.separator {
+    width: 960px;
+    /* height: 200px; */
+    border-bottom: 1px solid var(--pink);
+    position: relative;
+    font-size: 20px;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 1000;
+
+}
+
 .button {
 
     background-color: var(--secundary-color);
@@ -554,7 +566,7 @@ form .item #photos-preview img {
 .product-single .price-buy .price .old {
 
     text-decoration: line-through;
-    color: var(--secundary-color);
+    color: var(--cyan);
     font-size: 14px;
     font-weight: normal;
     margin-left: 8px;
@@ -574,6 +586,7 @@ form .item #photos-preview img {
 .shop h2 {
 
     margin: 48px 0;
+    color: white;
 
 }
 
@@ -604,13 +617,13 @@ form .item #photos-preview img {
 
     margin: 8px 0;
     font-weight: 300;
-    color: white;
+    color: var(--foreground);
 
 }
 
 .shop .items p {
 
-    color: black;
+    color: var(--green);
     font-weight: 300;
     font-size: 24px;
     margin-top: 8px;
@@ -622,7 +635,7 @@ form .item #photos-preview img {
     padding: 0;
     margin: 4px 0;
     font-size: 14px;
-    color: grey;
+    color: var(--cyan);
     text-decoration: line-through;
 
 }
